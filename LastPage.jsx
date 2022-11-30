@@ -38,8 +38,9 @@ const LastPage = () => {
     setOpen(false);
   };
 
+
   return (
-    <Box mt="15%" display="flex" alignItems="center" justifyContent="center">
+    <Box mt="10%" display="flex" alignItems="center" justifyContent="center">
       <Formik
         onSubmit={async (values) => {
           await new Promise((r) => setTimeout(r, 500));
@@ -61,6 +62,17 @@ const LastPage = () => {
           handleSubmit,
         }) => (
           <form onSubmit={handleSubmit}>
+            <Typography
+              sx={{
+                fontWeight: "bold",
+                display: "flex",
+                justifyContent: "start",
+                mb: "2rem",
+                fontSize: "2em",
+              }}
+            >
+              Enter Details
+            </Typography>
             <Box>
               <Typography
                 sx={{
@@ -69,7 +81,7 @@ const LastPage = () => {
                   justifyContent: "start",
                 }}
               >
-                FullName
+                FullName *
               </Typography>
               <TextField
                 fullWidth
@@ -91,7 +103,7 @@ const LastPage = () => {
                   mt: "2rem",
                 }}
               >
-                Email
+                Email *
               </Typography>
               <TextField
                 fullWidth
